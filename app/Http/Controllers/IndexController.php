@@ -2,15 +2,21 @@
 
 namespace Corp\Http\Controllers;
 
+use Corp\Repositories\SlidersRepository;
 use Illuminate\Http\Request;
+
+use Config;
+
 
 class IndexController extends SiteController
 {
-    public function __construct() {
+    public function __construct(SlidersRepository $s_rep) {
        parent::__construct(new \Corp\Repositories\MenusRepository(new \Corp\Menu));
 
        $this->bar = 'right';
        $this->template = env('THEME').'.index';
+
+       $this->s_rep = $s_rep;
 
     }
 
@@ -22,7 +28,12 @@ class IndexController extends SiteController
      */
     public function index()
     {
-       return $this->renderOutput();
+        $sliderItems = $this->getSliders();
+
+        $slider = view(env('THEME').'.slider')->with('sliders', $sliderItems)->render();
+        $this->vars = array_add($this->vars, 'slider', $slider);
+
+        return $this->renderOutput();
     }
 
     /**
@@ -89,5 +100,20 @@ class IndexController extends SiteController
     public function destroy($id)
     {
         //
+    }
+
+    public function getSliders(){
+       $sliders = $this->s_rep->get();
+
+        if($sliders->isEmpty()) {
+            return FALSE;
+        }
+
+        $sliders->transform(function($item,$key) {
+            $item->img = Config::get('settings.slider_path').'/'.$item->img;
+            return $item;
+        });
+
+        return $sliders;
     }
 }
