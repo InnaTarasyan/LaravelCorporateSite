@@ -6,3 +6,7 @@
 @section('slider')
   {!! $slider !!}
 @endsection
+
+@section('content')
+    {!! $content !!}
+@endsection
