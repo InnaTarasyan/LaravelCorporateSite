@@ -45,6 +45,10 @@ class IndexController extends SiteController
         $articles = $this->getArticles();
         $this->contentRightBar = view(env('THEME').'.indexBar')->with('articles', $articles)->render();
 
+        $this->title = 'Home';
+        $this->keywords = 'Home';
+        $this->meta_desc = 'Home';
+
         return $this->renderOutput();
     }
 
