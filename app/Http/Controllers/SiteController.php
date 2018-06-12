@@ -41,13 +41,15 @@ class SiteController extends Controller
             $this->vars = array_add($this->vars, 'rightBar', $rightBar);
             $this->vars = array_add($this->vars, 'bar', $this->bar);
 
-            $footer = view(env('THEME').'.footer')->render();
-            $this->vars = array_add($this->vars, 'footer', $footer);
         }
+
 
         $this->vars = array_add($this->vars, 'title', $this->title);
         $this->vars = array_add($this->vars, 'meta-desc', $this->meta_desc);
         $this->vars = array_add($this->vars, 'keywords', $this->keywords);
+
+        $footer = view(env('THEME').'.footer')->render();
+        $this->vars = array_add($this->vars, 'footer', $footer);
 
         return view($this->template)->with($this->vars);
     }

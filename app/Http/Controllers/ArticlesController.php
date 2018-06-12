@@ -28,8 +28,11 @@ class ArticlesController extends SiteController
      */
     public function index()
     {
-
         $articles = $this->getArticles();
+        $content = view(env('THEME').'.articles_content')->with('articles', $articles)->render();
+        $this->vars = array_add($this->vars, 'content', $content);
+
+
         return $this->renderOutput();
     }
 
@@ -45,7 +48,7 @@ class ArticlesController extends SiteController
     }
 
     public function getArticles($alias = FALSE){
-        $articles = $this->a_rep->get(['title', 'alias', 'img', 'created_at', 'desc'], FALSE, TRUE);
+        $articles = $this->a_rep->get(['id', 'title', 'alias', 'img', 'created_at', 'desc', 'user_id', 'category_id'], FALSE, TRUE);
         if($articles){
            // $articles->load('user', 'category', 'comments');
         }
