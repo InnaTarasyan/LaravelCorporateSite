@@ -39,7 +39,7 @@ class MenusTableSeeder extends Seeder
 
             DB::table('menus')->insert([
                 'title' => 'Interesting',
-                'path' => 'http://corporativesite.com/articles/cat/iteresting',
+                'path' => 'http://corporativesite.com/articles/cat/interesting',
                 'parent' => 3,
                 'created_at' => NULL,
                 'updated_at' => NULL

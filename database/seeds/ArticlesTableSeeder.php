@@ -34,7 +34,7 @@ class ArticlesTableSeeder extends Seeder
                 'created_at' => '2018-06-17 21:00:00',
                 'updated_at' => '2018-06-17 21:00:00',
                 'user_id' => NULL,
-                'category_id'=> 1,
+                'category_id'=> 2,
             ]);
 
             DB::table('articles')->insert([
@@ -46,7 +46,7 @@ class ArticlesTableSeeder extends Seeder
                 'created_at' => '2018-06-17 21:00:00',
                 'updated_at' => '2018-06-17 21:00:00',
                 'user_id' => NULL,
-                'category_id'=> 1,
+                'category_id'=> 3,
             ]);
         }
     }
