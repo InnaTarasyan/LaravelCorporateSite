@@ -24,7 +24,7 @@
 
                 <div class="the-post group">
                     <div class="avatar">
-                        @set($hash, ($comment->email) ? md5($comment->email) : $comment->user->email)
+                        @set($hash, ($comment->email) ? md5($comment->email) : md5($comment->user->email))
                         <img alt="" src="https://www.gravatar.com/avatar/{{$hash}}?d=mm&s=55" class="avatar" />
                     </div>
                     <span class="author"><strong><a href="#">{{ isset($comment->user) ? $comment->user->name : $comment->name}}</a></strong> in</span>

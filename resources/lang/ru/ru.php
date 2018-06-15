@@ -8,5 +8,6 @@ return [
     'articles_no' => '<h2>Записей нет</h2>',
     'latest_comments' => 'Последние ответы',
     'latest_projects' => 'Последние работы',
+    'reply' => 'Ответить'
 
 ];
