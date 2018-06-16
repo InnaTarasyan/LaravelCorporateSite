@@ -47,15 +47,25 @@ class ArticlesController extends SiteController
 
     public function show($alias = FALSE)
     {
-        $article = $this->a_rep->one($alias, ['comments' => true]);
+        $article = $this->a_rep->one($alias,['comments' => TRUE]);
 
-        $content = view(env('THEME').'.article_content')->with('article', $article)->render();
-        $this->vars = array_add($this->vars, 'content', $content);
+
+        if(isset($article->id)) {
+            $this->title = $article->title;
+            $this->keywords = $article->keywords;
+            $this->meta_desc = $article->meta_desc;
+        }
+
+
+        $content = view(env('THEME').'.article_content')->with('article',$article)->render();
+        $this->vars = array_add($this->vars,'content',$content);
+
 
         $comments = $this->getComments(config('settings.recent_comments'));
-        $portfolios =  $this->getPortfolios(config('settings.recent_portfolios'));
+        $portfolios = $this->getPortfolios(config('settings.recent_portfolios'));
 
-        $this->contentRightBar =  view(env('THEME').'.articlesBar')->with([ 'comments' => $comments, 'portfolios' => $portfolios])->render();
+        $this->contentRightBar = view(env('THEME').'.articlesBar')->with(['comments' => $comments,'portfolios' => $portfolios]);
+
 
         return $this->renderOutput();
     }
