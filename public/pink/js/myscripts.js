@@ -51,14 +51,10 @@ jQuery(document).ready(function($) {
                                     }
                                 }
 
-
-
-
                                 $('#cancel-comment-reply-link').click();
                             })
 
                     }
-
 
                 },
                 error:function() {
