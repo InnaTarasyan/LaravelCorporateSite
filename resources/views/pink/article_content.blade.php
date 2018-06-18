@@ -3,7 +3,6 @@
         <!-- post featured & title -->
 
         @if($article)
-
             <div class="thumbnail">
                 <!-- post title -->
                 <h1 class="post-title"><a href="#">{{ $article->title }}</a></h1>
