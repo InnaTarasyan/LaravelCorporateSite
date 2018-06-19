@@ -62,9 +62,22 @@ class PortfolioController extends SiteController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($alias = FALSE)
     {
-        //
+        $portfolio = $this->p_rep->one($alias);
+
+        if(isset($portfolio->id)) {
+            $this->title = $portfolio->title;
+            $this->keywords = $portfolio->keywords;
+            $this->meta_desc  = $portfolio->meta_desc;
+        }
+
+        $portfolios = $this->getPortfolios(config('settings.other_portfolios'), FALSE);
+        $content = view(env('THEME').'.portfolio_content')->with(['portfolio' => $portfolio, 'portfolios' => $portfolios])->render();
+        $this->vars = array_add($this->vars,'content',$content);
+
+        return $this->renderOutput();
+
     }
 
     /**
@@ -101,8 +114,8 @@ class PortfolioController extends SiteController
         //
     }
 
-    public function getPortfolios(){
-        $portfolios = $this->p_rep->get(['title', 'text', 'customer', 'alias', 'img', 'created_at', 'filter_alias'], FALSE, TRUE);
+    public function getPortfolios($take = FALSE, $paginate = TRUE){
+        $portfolios = $this->p_rep->get(['title', 'text', 'customer', 'alias', 'img', 'created_at', 'filter_alias'], $take, $paginate);
         if($portfolios){
             $portfolios->load('filter');
         }

@@ -12,6 +12,7 @@ return [
     'skills' => 'Навыки',
     'view_project' => 'Посмотреть проект',
     'customer' => 'Заказчик',
-    'year' => 'Год'
+    'year' => 'Год',
+    'other_projects' => 'Другие проекты'
 
 ];
