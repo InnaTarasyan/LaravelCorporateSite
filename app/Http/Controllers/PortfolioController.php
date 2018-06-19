@@ -3,9 +3,18 @@
 namespace Corp\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Corp\Repositories\PortfoliosRepository;
 
-class PortfolioController extends Controller
+class PortfolioController extends SiteController
 {
+
+    public function __construct( PortfoliosRepository $p_rep ) {
+        parent::__construct(new \Corp\Repositories\MenusRepository(new \Corp\Menu));
+
+        $this->template = env('THEME').'.portfolios';
+        $this->p_rep = $p_rep;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +22,17 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        //
+        $this->title = 'Портфолио';
+        $this->keywords = 'Портфолио';
+        $this->meta_desc = 'Портфолио';
+
+        $portfolios = $this->getPortfolios();
+
+        $content = view(env('THEME').'.portfolios_content')->with('portfolios', $portfolios)->render();
+        $this->vars = array_add($this->vars, 'content', $content);
+
+
+        return $this->renderOutput();
     }
 
     /**
@@ -80,5 +99,13 @@ class PortfolioController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getPortfolios(){
+        $portfolios = $this->p_rep->get(['title', 'text', 'customer', 'alias', 'img', 'created_at', 'filter_alias'], FALSE, TRUE);
+        if($portfolios){
+            $portfolios->load('filter');
+        }
+        return $portfolios;
     }
 }
