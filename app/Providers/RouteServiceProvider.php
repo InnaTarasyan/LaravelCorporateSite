@@ -24,8 +24,12 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-
+        Route::pattern('alias','[\w-]+');
         parent::boot();
+
+        Route::bind('articles', function ($value) {
+            return \Corp\Article::where('alias',$value)->first();
+        });
     }
 
     /**

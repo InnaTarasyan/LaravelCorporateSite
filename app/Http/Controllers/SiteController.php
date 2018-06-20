@@ -43,6 +43,11 @@ class SiteController extends Controller
 
         }
 
+        if($this->contentLeftBar){
+            $leftBar =  view(env('THEME').'.leftBar')->with('content_leftBar', $this->contentLeftBar)->render();
+            $this->vars = array_add($this->vars, 'leftBar', $this->contentLeftBar);
+            $this->vars = array_add($this->vars, 'bar', $this->bar);
+        }
 
         $this->vars = array_add($this->vars, 'title', $this->title);
         $this->vars = array_add($this->vars, 'meta-desc', $this->meta_desc);
