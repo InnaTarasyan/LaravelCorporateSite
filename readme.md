@@ -48,23 +48,28 @@ After you have cloned or downloaded the project, navigate to the corresponding d
 ![ScreenShot](https://i.imgur.com/omYJ1Am.png)
  <br/> <br/>
 
- ## Portfolios Page
-  ### first part 
-![ScreenShot](https://i.imgur.com/UzKrLMN.png)
- <br/> <br/>
-## Portfolio Details Page
-  ### first part
-![ScreenShot](https://i.imgur.com/5P4fAIO.png)
- <br/> 
-  ### second part
-![ScreenShot](https://i.imgur.com/hH8OnCw.png)
- <br/> <br/>
+
 ## Article Comments
 ![ScreenShot](https://i.imgur.com/cVV3PJQ.png)
  <br/> <br/>
  ## Submit Article Comment
 ![ScreenShot](https://i.imgur.com/mHGspew.png)
  <br/> <br/>
+
+
+## Portfolios Page
+  ### first part
+![ScreenShot](https://i.imgur.com/5P4fAIO.png)
+ <br/> 
+  ### second part
+![ScreenShot](https://i.imgur.com/hH8OnCw.png)
+ <br/> <br/>
+ 
+  ## Portfolios Details Page
+   ### first part 
+ ![ScreenShot](https://i.imgur.com/UzKrLMN.png)
+  <br/> <br/>
+ 
 ## Contact Us Page
 ![ScreenShot](https://i.imgur.com/8gWK7Tc.png)
  <br/> <br/>
