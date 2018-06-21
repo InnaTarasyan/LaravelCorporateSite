@@ -29,29 +29,34 @@ After you have cloned or downloaded the project, navigate to the corresponding d
 
 ## Pages
 ## Main Page 
+   ### first part
 ![ScreenShot](https://i.imgur.com/8f4kj37.png)
  <br/> 
+  ### second part
 ![ScreenShot](https://i.imgur.com/eUPQQ7T.png) 
 <br/> <br/>
 
  ## Articles Page 
-
+   ### first part
 ![ScreenShot](https://i.imgur.com/XegKJGC.png)
  <br/>
-
+   ### second part
 ![ScreenShot](https://i.imgur.com/9MCGX2q.png)
  <br/> <br/>
  ## Article Details Page
-
+  
 ![ScreenShot](https://i.imgur.com/omYJ1Am.png)
  <br/> <br/>
 
  ## Portfolios Page
+  ### first part 
 ![ScreenShot](https://i.imgur.com/UzKrLMN.png)
  <br/> <br/>
-## Portfolio Details Page 
+## Portfolio Details Page
+  ### second part
 ![ScreenShot](https://i.imgur.com/5P4fAIO.png)
  <br/> 
+  ### third part
 ![ScreenShot](https://i.imgur.com/hH8OnCw.png)
  <br/> <br/>
 ## Article Comments
