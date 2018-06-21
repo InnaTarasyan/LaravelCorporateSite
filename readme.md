@@ -53,10 +53,10 @@ After you have cloned or downloaded the project, navigate to the corresponding d
 ![ScreenShot](https://i.imgur.com/UzKrLMN.png)
  <br/> <br/>
 ## Portfolio Details Page
-  ### second part
+  ### first part
 ![ScreenShot](https://i.imgur.com/5P4fAIO.png)
  <br/> 
-  ### third part
+  ### second part
 ![ScreenShot](https://i.imgur.com/hH8OnCw.png)
  <br/> <br/>
 ## Article Comments
