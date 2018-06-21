@@ -35,3 +35,6 @@ Route::get('articles/cat/{cat_alias?}',['uses'=>'ArticlesController@index','as'=
 Route::resource('comment', 'CommentController', ['only' => ['store']]);
 
 Route::match(['get', 'post'], '/contacts', ['uses' => 'ContactsController@index', 'as' => 'contacts']);
+
+Route::auth();
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
