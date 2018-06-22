@@ -36,5 +36,18 @@ Route::resource('comment', 'CommentController', ['only' => ['store']]);
 
 Route::match(['get', 'post'], '/contacts', ['uses' => 'ContactsController@index', 'as' => 'contacts']);
 
-Route::auth();
-Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
+    Route::auth();
+    Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
+//admin
+Route::group([ 'prefix' => 'admin','middleware'=> 'auth'],function() {
+
+    //admin
+    Route::get('/',['uses' => 'Admin\IndexController@index','as' => 'adminIndex']);
+
+    // articles
+    Route::resource('/articles','Admin\ArticlesController', ['as' => 'admin']);
+
+});
+
+// php artisan route:list
