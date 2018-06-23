@@ -19,5 +19,10 @@ class DatabaseSeeder extends Seeder
          $this->call(ArticlesTableSeeder::class);
          $this->call(CommentsTableSeeder::class);
          $this->call(PortfoliosTableSeeder::class);
+
+         $this->call(RolesTableSeeder::class);
+         $this->call(PermissionsTableSeeder::class);
+         $this->call(RoleUserTableSeeder::class);
+         $this->call(PermissionRoleTableSeeder::class);
     }
 }
