@@ -39,15 +39,19 @@ Route::match(['get', 'post'], '/contacts', ['uses' => 'ContactsController@index'
     Route::auth();
     Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
+
+// for the version of laravel 5.6 we have to add  'can:accessAdminpanel' middleware
+Route::group(['middleware' => 'can:accessAdminpanel'], function() {
 //admin
-Route::group([ 'prefix' => 'admin','middleware'=> 'auth'],function() {
+    Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
-    //admin
-    Route::get('/',['uses' => 'Admin\IndexController@index','as' => 'adminIndex']);
+        //admin
+        Route::get('/', ['uses' => 'Admin\IndexController@index', 'as' => 'adminIndex']);
 
-    // articles
-    Route::resource('/articles','Admin\ArticlesController', ['as' => 'admin']);
+        // articles
+        Route::resource('/articles', 'Admin\ArticlesController', ['as' => 'admin']);
 
+    });
 });
 
 // php artisan route:list
