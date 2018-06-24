@@ -48,8 +48,10 @@ Route::group(['middleware' => 'can:accessAdminpanel'], function() {
         //admin
         Route::get('/', ['uses' => 'Admin\IndexController@index', 'as' => 'adminIndex']);
 
-        // articles
-        Route::resource('/articles', 'Admin\ArticlesController', ['as' => 'admin']);
+        Route::group(['middleware' => 'can:accessAdminArticles'], function() {
+            // articles
+            Route::resource('/articles', 'Admin\ArticlesController', ['as' => 'admin']);
+        });
 
     });
 });
