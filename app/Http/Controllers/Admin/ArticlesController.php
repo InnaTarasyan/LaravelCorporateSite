@@ -2,9 +2,12 @@
 
 namespace Corp\Http\Controllers\Admin;
 
+use Corp\Article;
+use Corp\Category;
 use Corp\Repositories\ArticlesRepository;
 use Illuminate\Http\Request;
 use Corp\Http\Controllers\Controller;
+use Gate;
 
 class ArticlesController extends AdminController
 {
@@ -14,6 +17,8 @@ class ArticlesController extends AdminController
 
         $this->a_rep = $a_rep;
         $this->template = env('THEME').'.admin.articles';
+
+       // $this->middleware('can:save', ['only' => ['create']]);
     }
 
     /**
@@ -39,7 +44,29 @@ class ArticlesController extends AdminController
      */
     public function create()
     {
-        //
+        // added ArticlePolicy
+        if(Gate::denies('save', new \Corp\Article)){
+            abort(403);
+        }
+
+        $this->title = 'Добавить новый материал!';
+
+        $categories = Category::select(['title', 'alias', 'parent_id', 'id'])->get();
+
+        $lists = array();
+        foreach($categories as $category) {
+            if($category->parent_id == 0){
+                $lists[$category->title] = array();
+            } else {
+                $lists[Category::where('id', $category->parent_id)->first()->title][$category->id] = $category->title;
+            }
+         }
+
+        $this->content = view(env('THEME').'.admin.articles_create_content')->with('categories',$lists)->render();
+        $this->vars = array_add($this->vars, 'content', $this->content);
+
+        return $this->renderOutput();
+
     }
 
     /**

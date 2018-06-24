@@ -2,8 +2,10 @@
 
 namespace Corp\Providers;
 
+use Corp\Policies\ArticlePolicy;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Corp\Article;
 
 
 class AuthServiceProvider extends ServiceProvider
@@ -14,7 +16,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Corp\Model' => 'Corp\Policies\ModelPolicy',
+        // registered Article Policy
+       Article::class => ArticlePolicy::class
     ];
 
     /**
@@ -33,6 +36,10 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('accessAdminArticles', function ($user) {
             return $user->canDo('VIEW_ADMIN_ARTICLES', true);
         });
+
+//        Gate::define('save', function ($user) {
+//            return $user->canDo('ADD_ARTICLES', true);
+//        });
 
 
     }
