@@ -17,9 +17,9 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->text('text');
 
-            $table->string('name');
-            $table->string('email');
-            $table->string('site');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('site')->nullable();
 
             $table->integer('parent_id');
             $table->timestamps();

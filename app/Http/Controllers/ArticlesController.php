@@ -55,9 +55,9 @@ class ArticlesController extends SiteController
 
 
         if(isset($article->id)) {
-            $this->title = $article->title;
-            $this->keywords = $article->keywords;
-            $this->meta_desc  = $article->meta_desc;
+            $this->title = isset($article->title) ? $article->title: '';
+            $this->keywords = isset($article->keywords) ? $article->keywords : '';
+            $this->meta_desc  = isset($article->meta_desc) ? $article->meta_desc: '';
         }
 
 
