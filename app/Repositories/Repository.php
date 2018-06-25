@@ -41,8 +41,12 @@ abstract class Repository{
    }
 
    public function one($alias, $attr = array()){
-       $result = $this->check($this->model->where('alias', $alias)->get())->first();
-       return $result;
+       $data = $this->model->where('alias', $alias)->get();
+       if(count($data) > 0){
+           $result = $this->check($data)->first();
+           return $result;
+       }
+       return [];
    }
 
    public function transliterate($string){
