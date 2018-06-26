@@ -13,6 +13,8 @@ return [
     'view_project' => 'Посмотреть проект',
     'customer' => 'Заказчик',
     'year' => 'Год',
-    'other_projects' => 'Другие проекты'
+    'other_projects' => 'Другие проекты',
+    'permissions' => 'Привилегии',
+    'update' => 'Обновить'
 
 ];

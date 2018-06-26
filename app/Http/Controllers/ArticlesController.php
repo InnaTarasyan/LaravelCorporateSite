@@ -61,6 +61,7 @@ class ArticlesController extends SiteController
         }
 
 
+
         $content = view(env('THEME').'.article_content')->with('article',$article)->render();
         $this->vars = array_add($this->vars,'content',$content);
 
