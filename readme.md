@@ -1,7 +1,15 @@
 # Full Functional Corporate Site
+This is a full functional <i>Laravel Corporate</i> site. It has a very convenient <i>Admin 
+Panel</i> with <i>CRUD</i> operations for data management
 
 ## Prerequisits
-Ensure you have PHP version 7.1.*
+<ul>
+  <li>Ensure you have PHP version 7.1.*</li>
+  <li>Composer installed</li>
+  <li>Laravel 5</li>
+  <li>MySQL</li>
+</ul>
+
 
 ## Running the site
 After you have cloned or downloaded the project, navigate to the corresponding directory
@@ -26,6 +34,20 @@ After you have cloned or downloaded the project, navigate to the corresponding d
      php artisan db:seed <br/>
   </li>
 </ul>
+
+## Used Technologies
+<ul>
+  <li>The Pink Rio Template integrated</i>
+  <li>Forms & HTML</li>
+  <li>Laravel Menu</li>
+  <li>Pagination</li>
+  <li>Laravel Authorization</li>
+  <li>Laravel Eloquent Relationships</li>
+  <li>Gravatar integration</li>
+  <li>CKEditor - WYSIWYG HTML editor</li>
+  <li>Bootstrap FileStyle</li>
+</ul>
+
 
 ## Pages
 ## Main Page 
@@ -76,3 +98,22 @@ After you have cloned or downloaded the project, navigate to the corresponding d
 ## Page Not Found 
 ![ScreenShot](https://i.imgur.com/STeVldk.png)
 
+# Admin Panel
+ ## Articles Page
+![ScreenShot](https://i.imgur.com/QzlhfYb.png)
+
+<br/><br/>
+ ### first part
+![ScreenShot](https://i.imgur.com/WnEL6aX.png)
+ 
+ ### second part
+![ScreenShot](https://i.imgur.com/u6RSaEk.png)
+ 
+ 
+ <br/> <br/>
+ 
+ ## Edit Permissions Page
+ ![ScreenShot](https://i.imgur.com/nMcjWTD.png)
+ 
+ ## Edit Menus Page
+ ![ScreenShot](https://i.imgur.com/EtQORDg.png)
