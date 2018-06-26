@@ -57,6 +57,10 @@ Route::group(['middleware' => 'can:accessAdminpanel'], function() {
             Route::resource('/permissions', 'Admin\PermissionsController', ['as' => 'admin']);
         });
 
+        Route::group(['middleware' => 'can:viewAdminMenu'], function() {
+            Route::resource('/menus', 'Admin\MenusController', ['as' => 'admin']);
+        });
+
     });
 });
 
