@@ -20,7 +20,7 @@ class CommentsTableSeeder extends Seeder
                 'parent_id' => 0,
                 'created_at' => '2018-06-21 21:00:00',
                 'updated_at' => NULL,
-                'article_id' => 6,
+                'article_id' => 2,
                 'user_id' => NULL
             ]);
 
@@ -32,7 +32,7 @@ class CommentsTableSeeder extends Seeder
                 'parent_id' => 0,
                 'created_at' => '2018-06-21 21:00:00',
                 'updated_at' => NULL,
-                'article_id' => 7,
+                'article_id' => 3,
                 'user_id' => 1
             ]);
 
@@ -44,7 +44,7 @@ class CommentsTableSeeder extends Seeder
                 'parent_id' => 0,
                 'created_at' => '2018-06-21 21:00:00',
                 'updated_at' => NULL,
-                'article_id' => 8,
+                'article_id' => 2,
                 'user_id' => 1
             ]);
 
@@ -56,7 +56,7 @@ class CommentsTableSeeder extends Seeder
                 'parent_id' => 3,
                 'created_at' => '2018-06-21 21:00:00',
                 'updated_at' => NULL,
-                'article_id' => 6,
+                'article_id' => 2,
                 'user_id' => 1
             ]);
 
@@ -68,7 +68,7 @@ class CommentsTableSeeder extends Seeder
                 'parent_id' => 3,
                 'created_at' => '2018-06-21 21:00:00',
                 'updated_at' => NULL,
-                'article_id' => 6,
+                'article_id' => 2,
                 'user_id' => 1
             ]);
 
@@ -80,7 +80,7 @@ class CommentsTableSeeder extends Seeder
                 'parent_id' => 5,
                 'created_at' => '2018-06-21 21:00:00',
                 'updated_at' => NULL,
-                'article_id' => 6,
+                'article_id' => 2,
                 'user_id' => NULL
             ]);
 
@@ -92,7 +92,7 @@ class CommentsTableSeeder extends Seeder
                 'parent_id' => 1,
                 'created_at' => '2018-06-21 21:00:00',
                 'updated_at' => NULL,
-                'article_id' => 6,
+                'article_id' => 2,
                 'user_id' => 1
             ]);
 
@@ -104,7 +104,7 @@ class CommentsTableSeeder extends Seeder
                 'parent_id' => 2,
                 'created_at' => '2018-06-21 21:00:00',
                 'updated_at' => NULL,
-                'article_id' => 6,
+                'article_id' => 2,
                 'user_id' => 1
             ]);
 
@@ -116,7 +116,7 @@ class CommentsTableSeeder extends Seeder
                 'parent_id' => 0,
                 'created_at' => '2018-06-21 21:00:00',
                 'updated_at' => '2018-06-21 21:00:00',
-                'article_id' => 6,
+                'article_id' => 2,
                 'user_id' => NULL
             ]);
 

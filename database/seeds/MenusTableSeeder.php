@@ -15,7 +15,7 @@ class MenusTableSeeder extends Seeder
         if (DB::table('menus')->count() == 0) {
             DB::table('menus')->insert([
                 'title' => 'Home',
-                'path' => 'http://corporativesite.com/',
+                'path' =>  env('APP_URL'),
                 'parent' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL
@@ -23,7 +23,7 @@ class MenusTableSeeder extends Seeder
 
             DB::table('menus')->insert([
                 'title' => 'Blog',
-                'path' => 'http://corporativesite.com/articles',
+                'path' =>  env('APP_URL').'/articles',
                 'parent' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL
@@ -31,31 +31,31 @@ class MenusTableSeeder extends Seeder
 
             DB::table('menus')->insert([
                 'title' => 'Computers',
-                'path' => 'http://corporativesite.com/articles/cat/computers',
-                'parent' => 3,
+                'path' =>  env('APP_URL').'/articles/cat/computers',
+                'parent' => 2,
                 'created_at' => NULL,
                 'updated_at' => NULL
             ]);
 
             DB::table('menus')->insert([
                 'title' => 'Interesting',
-                'path' => 'http://corporativesite.com/articles/cat/interesting',
-                'parent' => 3,
+                'path' =>  env('APP_URL').'/articles/cat/interesting',
+                'parent' => 2,
                 'created_at' => NULL,
                 'updated_at' => NULL
             ]);
 
             DB::table('menus')->insert([
                 'title' => 'Advices',
-                'path' => 'http://corporativesite.com/articles/cat/soveti',
-                'parent' => 3,
+                'path' =>  env('APP_URL').'/articles/cat/soveti',
+                'parent' => 2,
                 'created_at' => NULL,
                 'updated_at' => NULL
             ]);
 
             DB::table('menus')->insert([
                 'title' => 'Portfolio',
-                'path' => 'http://corporativesite.com/portfolios',
+                'path' =>  env('APP_URL').'/portfolios',
                 'parent' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL
@@ -63,7 +63,7 @@ class MenusTableSeeder extends Seeder
 
             DB::table('menus')->insert([
                 'title' => 'Contacts',
-                'path' => 'http://corporativesite.com/contacts',
+                'path' =>  env('APP_URL').'/contacts',
                 'parent' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL

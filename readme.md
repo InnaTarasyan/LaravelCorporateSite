@@ -16,23 +16,44 @@ After you have cloned or downloaded the project, navigate to the corresponding d
 <ul>
   <li>
        Install all the dependencies as specified in the composer.lock file (in your terminal). <br/>
-       cd CorporateSite 
-       composer install
+       composer install <br/>
+       php artisan vendor:publish
   </li>
   <li>
-      Copy the .env.example file to the .env file, and set the corresponding keys
+      Copy the .env.example file to the .env file, and set the corresponding keys:
+      <ul>
+         <li>The APP_URL key</li>
+         <li>The THEME key</li>
+         <li>DB_CONNECTION</li>
+         <li>DB_HOST</li>
+         <li>DB_PORT</li>
+         <li>DB_DATABASE</li>
+         <li>DB_USERNAME</li>
+         <li>DB_PASSWORD</li>
+         <li>MAIL_DRIVER</li>
+         <li>MAIL_HOST</li>
+         <li>MAIL_PORT</li>
+         <li>MAIL_USERNAME</li>
+         <li>MAIL_PASSWORD</li>
+         <li>MAIL_ENCRYPTION</li>
+      </ul>
   </li>
-  <li>
-      Run the site <br/>
-      php artisan serve --host=your_host --port=your_port <br/> 
-      Alternatively, create a virtual host. <br/>
-  </li>
+  <li>Generate Application Key: php artisan key:generate</li>
+  <li>Create the corresponding empty Database</li>
   <li>
      Execute the migrations and run the seeders <br/> 
      php artisan migrate <br/>
      composer dump-autoload <br/>
      php artisan db:seed <br/>
   </li>
+   <li>
+        Run the site <br/>
+        php artisan serve --host=your_host --port=your_port <br/> 
+        Alternatively, create a virtual host. <br/>
+    </li>
+  <li>In order to navigate to the <i>Admin Panel</i> go to APP_URL/admin </li>
+  <li>Login as <i>Super Admin</i> <br/> user: superadmin <br/> password: Testin876S4</li>
+  <li>Login as <i>Admin</i> <br/> user:admin <br/> password: Testing876S4 </li>
 </ul>
 
 ## Used Technologies

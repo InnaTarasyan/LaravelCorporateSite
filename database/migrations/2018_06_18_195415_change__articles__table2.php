@@ -15,8 +15,8 @@ class ChangeArticlesTable2 extends Migration
     {
         Schema::table('articles', function (Blueprint $table) {
 
-            $table->string('keywords');
-            $table->string('meta_desc');
+            $table->string('keywords')->nullable();
+            $table->string('meta_desc')->nullable();
             //
         });
     }

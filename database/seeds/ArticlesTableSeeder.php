@@ -33,7 +33,7 @@ class ArticlesTableSeeder extends Seeder
                 'img' => '{"mini":"001-55x55.jpg ","max":"001-816x282.jpg","path":"003-816x282"}',
                 'created_at' => '2018-06-17 21:00:00',
                 'updated_at' => '2018-06-17 21:00:00',
-                'user_id' => NULL,
+                'user_id' => 1,
                 'category_id'=> 2,
             ]);
 
@@ -45,7 +45,7 @@ class ArticlesTableSeeder extends Seeder
                 'img' => '{"mini":"0037-55x55.jpg ","max":"00212-816x282.jpg ","path":"003-816x282"}',
                 'created_at' => '2018-06-17 21:00:00',
                 'updated_at' => '2018-06-17 21:00:00',
-                'user_id' => NULL,
+                'user_id' => 1,
                 'category_id'=> 3,
             ]);
         }

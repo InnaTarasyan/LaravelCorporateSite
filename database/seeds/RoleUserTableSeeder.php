@@ -13,7 +13,7 @@ class RoleUserTableSeeder extends Seeder
     {
         if (DB::table('role_user')->count() == 0) {
             DB::table('role_user')->insert([
-                'user_id' => 5,
+                'user_id' => 1,
                 'role_id' => 1,
                 'created_at' =>  NULL,
                 'updated_at' => NULL
