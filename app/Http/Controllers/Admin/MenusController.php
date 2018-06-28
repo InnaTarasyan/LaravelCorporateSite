@@ -99,7 +99,13 @@ class MenusController extends AdminController
      */
     public function store(Request $request)
     {
-        //
+        $result = $this->m_rep->addMenu($request);
+
+        if(is_array($result) && !empty($result['error'])){
+            return back()->with($result);
+        }
+
+        return redirect('/admin')->with($result);
     }
 
     /**
