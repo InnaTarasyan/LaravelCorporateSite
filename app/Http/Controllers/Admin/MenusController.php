@@ -8,6 +8,7 @@ use Corp\Repositories\PortfoliosRepository;
 use Illuminate\Http\Request;
 use Corp\Http\Controllers\Controller;
 use Corp\Category;
+use Corp\Http\Requests\MenusRequest;
 
 class MenusController extends AdminController
 {
@@ -97,7 +98,7 @@ class MenusController extends AdminController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MenusRequest $request)
     {
         $result = $this->m_rep->addMenu($request);
 

@@ -8,6 +8,8 @@ use Corp\Policies\PermissionPolicy;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Corp\Article;
+use Corp\Menu;
+use Corp\Policies\MenuPolicy;
 
 
 class AuthServiceProvider extends ServiceProvider
@@ -20,7 +22,8 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         // registered Article Policy
        Article::class => ArticlePolicy::class,
-       Permission::class => PermissionPolicy::class
+       Permission::class => PermissionPolicy::class,
+       Menu::class => MenuPolicy::class
     ];
 
     /**
