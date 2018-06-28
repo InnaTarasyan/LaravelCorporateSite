@@ -78,7 +78,7 @@ class MenusController extends AdminController
         $filters = $filters->reduce(function ($returnFilters, $filter){
             $returnFilters[$filter->alias] = $filter->title;
             return $returnFilters;
-        }, ['parent' => 'Не используется', '1' => 'Раздел Портфолио']);
+        }, ['0' => 'Не используется', 'parent' => 'Раздел Портфолио']);
 
         $portfolios = $this->getPortfolios();
         $portfolios = $portfolios->reduce(function ($returnPortfolios, $portfolio){

@@ -19,6 +19,17 @@ return [
     'users' => 'Пользователи',
     'name' => 'Имя',
     'link' => 'Ссылка',
-    'delete' => 'Удалить'
+    'delete' => 'Удалить',
+    'name' => 'Название',
+    'item_title' => 'Заголовок пункта',
+    'parent_item_title' => 'Родительский пункт меню',
+    'parent' => 'Родитель',
+    'user_link' => 'Пользовательская ссылка',
+    'link_path' => 'Путь для ссылки',
+    'block_section' => 'Раздел Блог',
+    'block_category_link' => 'Ссылка на категорию Блога',
+    'portfolio_section' => 'Раздел Портфолио',
+    'portfolio' => 'Портфолио',
+    'portfolio_link_href' => 'Ссылка на запись Портфолио'
 
 ];

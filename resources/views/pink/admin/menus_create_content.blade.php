@@ -4,9 +4,9 @@
             <ul>
                 <li class="text-field">
                     <label for="name-contact-us">
-                        <span class="label">Название:</span>
+                        <span class="label"> {{Lang::get('ru.name')}}: </span>
                         <br />
-                        <span class="sublabel">Заголовок пункта</span><br />
+                        <span class="sublabel"> {{ Lang::get('ru.item_title') }}: </span><br />
                     </label>
                     <div class="input-prepend">
                         {!! Form::text('title',isset($menu->title) ? $menu->title  : old('title'), ['placeholder'=>'Введите название пункта']) !!}
@@ -14,9 +14,9 @@
                 </li>
                 <li class="text-field">
                     <label for="name-contact-us">
-                        <span class="label">Родительский пункт меню:</span>
+                        <span class="label">{{ Lang::get('ru.parent_item_title') }}:</span>
                         <br />
-                        <span class="sublabel">Родитель</span><br />
+                        <span class="sublabel">{{ Lang::get('ru.parent') }}</span><br />
                     </label>
                     <div class="input-prepend">
                         {!! Form::select('parent', $menus, isset($menu->parent) ? $menu->parent : null) !!}
@@ -26,13 +26,13 @@
             <h1>Тип меню</h1>
             <div id="accordion">
                 <h3>{!! Form::radio('type', 'customLink', (isset($type) && $type == 'blogLink') ? TRUE : FALSE) !!}
-                    <span class="label">Пользовательская ссылка:</span></h3>
+                    <span class="label"> {{Lang::get('ru.user_link')}}:</span></h3>
                     <ul>
                         <li class="text-field">
                             <label for="name-contact-us">
-                                <span class="label">Путь для ссылки:</span>
+                                <span class="label">{{ Lang::get('ru.link_path') }}:</span>
                                 <br />
-                                <span class="sublabel">Путь для ссылки:</span><br />
+                                <span class="sublabel">{{ Lang::get('ru.link_path') }}:</span><br />
                             </label>
                             <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span>
                                 {!! Form::text('custom_link',isset($menu->path) ? $menu->path  : old('path'), ['placeholder'=>'Введите название пункта']) !!}
@@ -40,14 +40,14 @@
                         </li>
                         <div style="clear:both"></div>
                     </ul>
-                <h3>{!! Form::radio('type', 'categoryLink', (isset($type) && $type == 'blogLink') ? TRUE : FALSE) !!}
-                    <span class="label">Раздел Блог:</span></h3>
+                <h3>{!! Form::radio('type', 'blogLink', (isset($type) && $type == 'blogLink') ? TRUE : FALSE) !!}
+                    <span class="label">{{Lang::get('ru.block_section')}}:</span></h3>
                     <ul>
                         <li class="text-field">
                             <label for="name-contact-us">
-                                <span class="label">Ссылка на категорию Блога:</span>
+                                <span class="label">{{Lang::get('ru.block_category_link')}}:</span>
                                 <br />
-                                <span class="sublabel">Ссылка на категорию Блога:</span><br />
+                                <span class="sublabel">{{Lang::get('ru.block_category_link')}}:</span><br />
                             </label>
                             <div class="input-prepend">
                                 @if($categories)
@@ -57,9 +57,9 @@
                         </li>
                         <li class="text-field">
                             <label for="name-contact-us">
-                                <span class="label">Раздел Блог:</span>
+                                <span class="label">{{Lang::get('ru.block_section')}}:</span>
                                 <br />
-                                <span class="sublabel">Блог:</span><br />
+                                <span class="sublabel">{{Lang::get('ru.block_section')}}:</span><br />
                             </label>
                             <div class="input-prepend">
                                 {!! Form::select('article_alias', $articles,  (isset($option) && $option) ? $option : null) !!}
@@ -68,23 +68,23 @@
                         <div style="clear:both"></div>
                     </ul>
                 <h3>{!! Form::radio('type', 'portfolioLink', (isset($type) && $type == 'blogLink') ? TRUE : FALSE) !!}
-                <span class="label">Раздел Портфолио:</span></h3>
+                <span class="label">{{Lang::get('ru.portfolio_section')}}:</span></h3>
                 <ul>
                     <li class="text-field">
                         <label for="name-contact-us">
-                            <span class="label">Ссылка на запись Портфолио:</span>
+                            <span class="label"> {{Lang::get('ru.portfolio_link_href')}}:</span>
                             <br />
-                            <span class="sublabel">Ссылка на запись Портфолио:</span><br />
+                            <span class="sublabel">{{Lang::get('ru.portfolio_link_href')}}:</span><br />
                         </label>
                         <div class="input-prepend">
-                            {!! Form::select('portfolios', $portfolios,  (isset($option) && $option) ? $option  : null)  !!}
+                            {!! Form::select('portfolio_alias', $portfolios,  (isset($option) && $option) ? $option  : null)  !!}
                         </div>
                     </li>
                     <li class="text-field">
                         <label for="name-contact-us">
-                            <span class="label">Портфолио:</span>
+                            <span class="label">{{Lang::get('ru.portfolio')}}:</span>
                             <br />
-                            <span class="sublabel">Портфолио:</span><br />
+                            <span class="sublabel">{{Lang::get('ru.portfolio')}}:</span><br />
                         </label>
                         <div class="input-prepend">
                             {!! Form::select('filter_alias', $filters,  (isset($option) && $option) ? $option  : null) !!}
