@@ -30,6 +30,11 @@ return [
     'block_category_link' => 'Ссылка на категорию Блога',
     'portfolio_section' => 'Раздел Портфолио',
     'portfolio' => 'Портфолио',
-    'portfolio_link_href' => 'Ссылка на запись Портфолио'
+    'portfolio_link_href' => 'Ссылка на запись Портфолио',
+    'user_name' => 'Имя',
+    'email' => 'Емаил',
+    'action' => 'Действие',
+    'users' => 'Пользователи',
+    'password' => 'Пароль'
 
 ];

@@ -34,6 +34,10 @@ class RouteServiceProvider extends ServiceProvider
         Route::bind('admin\menus', function ($value) {
             return \Corp\Menu::where('id',$value)->first();
         });
+
+        Route::bind('admin\users', function ($value) {
+            return \Corp\User::where('id',$value)->first();
+        });
     }
 
 
