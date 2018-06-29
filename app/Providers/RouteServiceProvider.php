@@ -27,8 +27,12 @@ class RouteServiceProvider extends ServiceProvider
         Route::pattern('alias','[\w-]+');
         parent::boot();
 
-        Route::bind('articles', function ($value) {
+        Route::bind('admin\articles', function ($value) {
             return \Corp\Article::where('alias',$value)->first();
+        });
+
+        Route::bind('admin\menus', function ($value) {
+            return \Corp\Menu::where('id',$value)->first();
         });
     }
 

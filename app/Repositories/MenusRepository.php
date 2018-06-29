@@ -53,6 +53,7 @@ class MenusRepository extends Repository{
 
 
         unset($data['type']);
+
         if($this->model->fill($data)->save()){
             return array(['status' => 'Ссылка добавлена!!']);
         }
