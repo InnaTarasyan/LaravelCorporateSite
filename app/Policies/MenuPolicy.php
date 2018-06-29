@@ -22,4 +22,12 @@ class MenuPolicy
     public function save(User $user){
         return $user->canDo('EDIT_MENU');
     }
+
+    public function update(User $user){
+        return $user->canDo('EDIT_MENU');
+    }
+
+    public function delete(User $user){
+        return $user->canDo('EDIT_MENU');
+    }
 }
