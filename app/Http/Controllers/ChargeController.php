@@ -11,7 +11,7 @@ class ChargeController extends Controller
     public function index(Request $request){
         if($request->isMethod('post')){
            $stripeToken = $request->input('stripeToken');
-           $plan = 'plan_D90o1fFbQeAdOT';
+           $plan = env('PLAN');
            $user = User::find(1);
            $user->newSubscription('main', $plan)->create($stripeToken);
            return redirect()->back();
