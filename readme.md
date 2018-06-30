@@ -64,6 +64,7 @@ After you have cloned or downloaded the project, navigate to the corresponding d
   <li>Pagination</li>
   <li>Laravel Authorization</li>
   <li>Laravel Eloquent Relationships</li>
+  <li>Intervention Image Library</li>
   <li>Gravatar integration</li>
   <li>CKEditor - WYSIWYG HTML editor</li>
   <li>Bootstrap FileStyle</li>
@@ -136,5 +137,14 @@ After you have cloned or downloaded the project, navigate to the corresponding d
  ## Edit Permissions Page
  ![ScreenShot](https://i.imgur.com/nMcjWTD.png)
  
- ## Edit Menus Page
+ ## View Menus Page
  ![ScreenShot](https://i.imgur.com/EtQORDg.png)
+ 
+ ## Edit Menus Page
+ ![ScreenShot](https://i.imgur.com/1SlDrTZ.png)
+ 
+ ## View Users Page
+ ![ScreenShot](https://i.imgur.com/EbL2ViZ.png)
+ 
+ ## Edit User Page
+ ![ScreenShot](https://i.imgur.com/sQvJszY.png)
