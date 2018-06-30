@@ -69,3 +69,5 @@ Route::group(['middleware' => 'can:accessAdminpanel'], function() {
 });
 
 // php artisan route:list
+
+Route::match(['get', 'post'], 'charge', 'ChargeController@index');

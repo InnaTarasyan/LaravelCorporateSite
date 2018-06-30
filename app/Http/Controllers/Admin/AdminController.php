@@ -4,7 +4,7 @@ namespace Corp\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Corp\Http\Controllers\Controller;
-
+use Gate;
 
 class AdminController extends \Corp\Http\Controllers\Controller
 {
@@ -52,10 +52,23 @@ class AdminController extends \Corp\Http\Controllers\Controller
 
     public function getMenu(){
        return \Menu::make('adminMenu', function ($menu) {
-            $menu->add('Статьи', array('route'  => 'admin.articles.index'));
-            $menu->add('Меню', array('route'  => 'admin.menus.index'));
-            $menu->add('Пользователи', array('route'  => 'admin.users.index'));
-            $menu->add('Привелегии', array('route'  => 'admin.permissions.index'));
+
+           if(Gate::allows('VIEW_ADMIN_ARTICLES')){
+               $menu->add('Статьи', array('route'  => 'admin.articles.index'));
+           }
+
+           if(Gate::allows('VIEW_ADMIN_MENU')){
+               $menu->add('Меню', array('route'  => 'admin.menus.index'));
+           }
+
+           if(Gate::allows('ADMIN_USERS')){
+               $menu->add('Пользователи', array('route'  => 'admin.users.index'));
+           }
+
+           if(Gate::allows('EDIT_USERS')){
+               $menu->add('Привелегии', array('route'  => 'admin.permissions.index'));
+           }
+
        });
     }
 }
