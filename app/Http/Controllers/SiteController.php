@@ -63,12 +63,15 @@ class SiteController extends Controller
         $menu = $this->m_rep->get();
         $mBuilder = \Menu::make('MyNavBar', function ($m) use ($menu) {
 
-            foreach ($menu as $item){
-                if($item->parent == 0){
-                    $m->add($item->title, $item->path)->id($item->id);
-                } else{
-                    if($m->find($item->parent)){
-                        $m->find($item->parent)->add($item->title, $item->path)->id($item->id);
+            // Check if menu is not false (empty collection) before iterating
+            if($menu && is_iterable($menu)){
+                foreach ($menu as $item){
+                    if($item->parent == 0){
+                        $m->add($item->title, $item->path)->id($item->id);
+                    } else{
+                        if($m->find($item->parent)){
+                            $m->find($item->parent)->add($item->title, $item->path)->id($item->id);
+                        }
                     }
                 }
             }
