@@ -121,7 +121,7 @@ class IndexController extends SiteController
     public function getSliders(){
        $sliders = $this->s_rep->get();
 
-        if($sliders->isEmpty()) {
+        if($sliders === false || $sliders->isEmpty()) {
             return FALSE;
         }
 

@@ -247,7 +247,7 @@ class MenusController extends AdminController
     public function getMenus()
     {
        $menus =  $this->m_rep->get();
-       if($menus->isEmpty()){
+       if($menus === false || $menus->isEmpty()){
            return FALSE;
        }
        else {
