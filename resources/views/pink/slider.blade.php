@@ -1,5 +1,5 @@
 
-@if(count($sliders) > 0)
+@if($sliders !== false && $sliders->count() > 0)
 
 
     <div id="slider-cycle" class="slider cycle no-responsive slider_cycle group" style="height:485px;">
